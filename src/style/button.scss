@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  max-width: 250px;
+  width: 180px;
+  padding: 10px 10px;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid $green;
+  margin-right: 25px;
+  letter-spacing: 1px;
+  background-color: $green;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--dark {
+    background-color: #272727;
+    border-color: #272727;
+    color:$green;
+  }
+}

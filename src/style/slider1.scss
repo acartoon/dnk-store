@@ -1,0 +1,37 @@
+
+.tns-nav {
+  margin-top: 15px;
+  text-align: center;
+
+  & button {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    opacity: 50%;
+    border-radius: 50%;
+    border: none;
+    margin-right: 10px;  
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.tns-nav-active {
+  background: #272727;
+}
+
+.tns-controls {
+  display: none;
+}
+
+.slider__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tns-outer {
+  margin-left: -10px;
+  margin-right: -10px;
+}

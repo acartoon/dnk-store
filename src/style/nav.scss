@@ -1,0 +1,247 @@
+$point: 992px;
+
+.show-main-nav {
+  overflow: hidden;
+}
+
+.nav {
+  position: relative;
+}
+
+.main-nav {
+  position: relative;
+  background: #272727;
+
+  @media(min-width: $point) {
+    background: transparent;
+  }
+}
+
+.main-nav__btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 101;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  box-sizing: content-box;
+  padding: 10px;
+
+  & span {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    vertical-align: bottom;
+    background: $green;
+    transition: background .3s;
+    z-index: 90;
+
+    .show-main-nav & {
+      background: 0 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $green;
+      transform-origin: 50% 50%;
+      transition: top .3s .3s,transform .3s;
+      top: 10px;
+
+      .show-main-nav & {
+        top: 0;
+        transform: rotate3d(0,0,1,-45deg);
+        transition: top .3s,transform .3s .5s;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $green;
+      transform-origin: 50% 50%;
+      transition: top .3s .3s,transform .3s;
+      top: -10px;
+
+      .show-main-nav & {
+        top: 0;
+        transform: rotate3d(0,0,1,45deg);
+        transition: top .3s,transform .3s .5s;
+      }
+    }
+  }
+}
+
+.main-nav__wrapper {
+  padding: 0;
+  padding-top: 40px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  margin: 0;
+  background: #272727;
+  color: white;
+  transition: left .5s ;
+  width: 100%;
+  // overflow: scroll;
+  overflow: hidden;
+
+  .show-main-nav & {
+    left: 0;
+    transition: left .5s;
+  }
+
+  @media(min-width: $point) {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: visible;
+    background: transparent;
+  }
+}
+
+.main-nav__wrapper-lvl2  {
+  position: absolute;
+  background: #272727;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  transition: left .5s;
+  padding-top: 10px;
+
+  &.active {
+    left: 0;
+    transition: left .5s ;
+  }
+
+  @media(min-width: $point) {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    background: $green;
+    left: 0;
+    width: 215px;
+    bottom: auto;
+    z-index: 1;
+    display: none;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  .main-nav__item:hover & {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  @media(min-width: $point) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--lvl2 {
+    @media(min-width: $point) {
+      & .main-nav__item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.main-nav__item {
+  @media(min-width: $point) {
+    position: relative;
+  }
+}
+
+.main-nav__link {
+  // padding-left: $padding + 10;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 10px;
+  color: #c3c0c0;
+  padding-left: 30px;
+  padding-right: 60px;
+  text-align: left;
+
+  @media(min-width: $point) {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 5px;
+    color: #272727;
+  }
+  
+  &--title {
+    // padding-left: $padding;
+    text-transform: uppercase;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+
+    @media(min-width: $point) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &--new {
+    color: $green;
+    text-transform: uppercase;
+  }
+}
+
+.main-nav__contacts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  width: 100%;
+  background: #434343fa;
+  color: #434343fa;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.main-nav__divider {
+  height: 1px;
+  width: 250px;
+  border: 0;
+  margin: 0 0 10px 20px;
+  background-image: linear-gradient(90deg,#666, #272727 80%);
+}
+
+.main-nav__back {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 3px;
+  color: #c3c0c0;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 10px 0px;
+  padding-left: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

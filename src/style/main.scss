@@ -1,0 +1,293 @@
+// container
+
+@import "variables";
+@import "button";
+@import "text";
+@import "main-banner";
+
+@import "nav";
+@import "./node_modules/bootstrap-4-grid/scss/grid.scss";
+@import "timeline";
+@import "form";
+@import "footer";
+@import "service";
+@import "clients";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  // max-width: 100%;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb15 {
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.title-video {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.block {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.marked-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+}
+
+.marked-list__item {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 15px;
+
+  &:before {
+    $size: 15px;
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    background-image: url(/img/tick.svg);
+    width: $size;
+    height: $size;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.banner {
+  max-width: 100%;
+  width: 100%;
+}
+.btn-group {
+  display: flex;
+}
+
+.map {
+  min-height: 300px;
+}
+
+.ymaps-layers-pane {
+	filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+
+.main {
+  margin-bottom: 50px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.link {
+  color: $green
+}
+
+
+.img {
+
+  &--50 {
+    height: 35px;
+    max-width: 110px;
+    margin: auto;
+  }
+}
+
+.stats-list__data {
+  font-size: 45px;
+  text-align: center;
+  color: #31d816;
+  font-weight: 700;
+  line-height: 80px;
+  margin: auto;
+}
+
+.stats-list__desc {
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+}
+
+.stats {
+  padding: 30px 0;
+  background: #272727;
+  color: #fff;
+}
+
+.stats-list {
+  background: #272727;
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.sotial__link {
+  display: block;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0;
+  background-image: url(/img/icons/social/youtube.svg);
+  margin: auto;
+
+  &--yt {
+    background-image: url(/img/icons/sotial/youtube.svg);
+  }
+
+  &--vk {
+    background-image: url(/img/icons/sotial/vk.svg);
+  }
+
+  &--inst {
+    background-image: url(/img/icons/sotial/instagram.svg);
+  }
+
+  &--fb {
+    background-image: url(/img/icons/sotial/facebook.svg);
+  }
+}
+
+.sotial {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+@import "slider";
+@import "slider1";
+
+
+.slider {
+  margin-bottom: 30px;
+}
+
+.about-slider {
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+
+.tns-ovh {
+  margin: 0 10px;
+}
+
+.about-slider {
+  display: flex;
+
+  .tns-item {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 2em;
+  }
+
+    &.tns-horizontal.tns-subpixel > .tns-item {
+      display: flex;
+      // position: relative;
+
+      // &:before {
+      //   position: absolute;
+      //   content: '';
+      //   background-image: url(/img/logo.svg);
+      //   width: 60px;
+      //   height: 30px;
+      //   background-repeat: no-repeat;
+      //   opacity: 0.3;
+      //   right: 16px;
+      //   bottom: 15px;
+      // }
+    }
+    
+}
+
+.about__item {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.about__wrapper {
+  background: #f6f6f6;
+  padding-bottom: 20px;
+}
+
+.no-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}
