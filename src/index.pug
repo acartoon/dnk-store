@@ -1,82 +1,109 @@
 extends template.pug
 
 block content
-  .container
-    section.slider-block
-      .slider
-        .banner
-        .banner
-        .banner
-  section.categories
-    .container
-      .row.mb-3
-        .col-6
-          .banner-catalog.banner-catalog--woman
-            p.banner-catalog__text Женщины
-        .col-6
-          .banner-catalog.banner-catalog--man
-            p.banner-catalog__text Мужчины
-      .row.mb-3
-        .col-12
-          .banner
-      .row.mb-3
-        .col-6
-          .banner-catalog.banner-catalog--child
-            p.banner-catalog__text Дети
-        .col-6
-          .banner-catalog.banner-catalog--teens
-            p.banner-catalog__text Подростки
-      .row.mb-3
-        .col-12
-          .banner
-          .banner__bottom
-            p.banner__name ренессанс
-            p.banner__slogan.slogan строго лимитированно 
-            button.button к коллекции
-      .row.mb-3
-        .col-12
-          .banner
+  section.categories.mb-4
+    .container-fluid
+      .row
+        .main-banner2
+          .main-banner2__content
+            h1.banner__text новая коллекция ренессанс уже на сайте!
+            button.button.button--big купить
 
-  section.products.mb-3
+  section.categories
+    .container-fluid
+      .row
+        .col-12.col-md-6
+          .row
+            img(src="http://placeimg.com/775/430/people")
+        .col-12.col-md-6.block-info
+          p.headertest Женщины
+          p.text Платья, футбы, толстовки и многое другое. Не забываем смотреть family Look
+          button.button.button--big купить
+      .row.mb-5
+        .col-12.col-md-6.block-info.block-info--grey.order-2.order-md-0
+          p.headertest Мужчины
+          p.text Крутая мужская коллекция dnk cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать нескольк
+          button.button.button--big купить
+        .col-12.col-md-6
+          .row
+            img(src="http://placeimg.com/775/430/people")
+
+  .container-fluid
+    .row
+      .banner
+      .banner__bottom
+        p.banner__name ренессанс
+        p.banner__slogan.slogan строго лимитированно 
+        button.button.button--big к коллекции
+
+  section.categories
+    .container-fluid
+      .row
+        .col-12.col-md-6
+          .row
+            img(src="http://placeimg.com/775/430/people")
+        .col-12.col-md-6.block-info.text-center.block-info--grey
+          p.headertest Подростки
+          p.text Платья, футбы, толстовки и многое другое. Не забываем смотреть family Look
+          button.button.button--big купить
+      .row.mb-3
+        .col-12.col-md-6.block-info.order-2.order-md-0
+          p.headertest Дети
+          p.text Крутая мужская коллекция dnk cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать нескольк
+          button.button.button--big купить
+        .col-12.col-md-6
+          .row
+            img(src="http://placeimg.com/775/430/people")
+
+  section.products.mb-5
     .container
-      h3 Популярные товары
+      p.headertest Популярные товары
       .row
         .col-6.col-md-3
           .product
-            img.product__img(src="http://placehold.it/350x400", alt="")
+            img.product__img(src="/img/1_.jpg", alt="")
+            p.product__name Костюм Error202 мокко Junior
+        .col-6.col-md-3.mb-3
+          .product
+            img.product__img(src="/img/2_.jpg", alt="")
+            p.product__name Свитшот Русский Стиль красный Junior
+        .col-6.col-md-3
+          .product
+            img.product__img(src="/img/3_.jpg", alt="")
+            p.product__name Майка Граффити черная Junior
+        .col-6.col-md-3
+          .product
+            img.product__img(src="/img/4_.jpg", alt="")
+            p.product__name Свитшот MADE IN РФ красный Woman
+    
+  section.caps.mb-5
+    .container
+      .row
+        .col-12.col-md-6
+          img(src="/img/new/580х430_1.jpg")
+        .col-12.col-md-6.caps__info.mb-4
+          p.headertest Товар который мы хотим активней продать!
+          p.caps__text.text cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
+          button.button.button--big купить
+  section.container
+    p.headertest Стильные образы
+      .row
+        .col-6.col-md-3
+          .product
+            img.product__img(src="http://placeimg.com/350/400/people", alt="")
             p.product__name Название товара
         .col-6.col-md-3.mb-3
           .product
-            img.product__img(src="http://placehold.it/350x400", alt="")
+            img.product__img(src="http://placeimg.com/350/400/people", alt="")
             p.product__name Название товара
         .col-6.col-md-3
           .product
-            img.product__img(src="http://placehold.it/350x400", alt="")
+            img.product__img(src="http://placeimg.com/350/400/people", alt="")
             p.product__name Название товара
         .col-6.col-md-3
           .product
-            img.product__img(src="http://placehold.it/350x400", alt="")
+            img.product__img(src="http://placeimg.com/350/400/people", alt="")
             p.product__name Название товара
-  section.sale.mb-3
-    .container
-      hr.mb-4
-      .row
-        .col-12.col-sm-6.mb-4
-          .banner-sale.banner--man
-          p.banner-sale__title Свитшоты от 1 200 р
-          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
-        .col-12.col-sm-6.mb-4
-          .banner-sale.banner--man
-          p.banner-sale__title Куртки от 1 200 р
-          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
-        .col-12.col-sm-6.mb-4
-          .banner-sale.banner.banner--man
-          p.banner-sale__title Комбезы от 1 200 р
-          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
-        .col-12.col-sm-6.mb-4
-          .banner-sale.banner--man
-          p.banner-sale__title Кофты от 1 200 р
-          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
 
 
-        
+  

@@ -61,7 +61,7 @@
   // }
 
   @media(min-width: 768px) {
-    height: 300px;
+    height: 380px;
   }
 }
 
@@ -126,8 +126,14 @@
 }
 
 .banner__bottom {
+  width: 100%;
   padding-top: 30px;
   margin-bottom: 25px;
+
+  @media(min-width: 768px) {
+    padding-top: 65px;
+    margin-bottom: 60px;
+  }
 }
 
 .banner__slogan {
@@ -137,4 +143,116 @@
 .banner__name {
   margin: 0;
   text-align: center;
+}
+
+.headertest {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 30px;
+  // padding-left: 20px;
+
+  // &:first-letter {
+  //   font-size: 25px;
+  // }
+}
+.caps__text {
+  line-height: 1.5em;
+  position: relative;
+}
+
+.caps__text:first-letter {
+  float: left;
+  font-size: 90px;
+  font-size: 4.125rem;
+  padding-top: 6px;
+  padding-top: 0.375rem;
+  padding-right: 10px;
+  // padding-right: 1.25rem;
+  // line-height: 53px;
+  // line-height: 3.3125rem;
+  font-weight: 400;
+
+  // position: absolute;
+  // top: 0;
+  // padding-bottom: 15px;
+  // font-size: 90px;
+  // font-weight: 400;
+  // float: left;
+  // padding-bottom: 1px;
+  // padding-right: 5px;
+  // // line-height: 45px;
+}
+
+
+.button--big {
+  background: transparent;
+  border: 1px solid black;
+  padding: 13px 40px;
+  text-align: center;
+  display: block;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.caps__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  text-align: center;
+
+  &--grey {
+    background: #f8f8f8;
+  }
+}
+
+.main-banner2 {
+  width: 100%;
+  position: relative;
+  height: 350px;
+  background-image: url('http://placeimg.com/1000/430/arch');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media(min-width: 768px) {
+    height: 450px;
+  }
+}
+
+
+.banner__text {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+.main-banner2__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.products {
+  background: #f8f8f8;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
