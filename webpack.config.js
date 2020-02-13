@@ -23,7 +23,7 @@ module.exports = {
     contentBase: path.join(__dirname, `public`),
     compress: false,
     open: true,
-    port: 8082,
+    port: 8085,
   },
 
   module: {

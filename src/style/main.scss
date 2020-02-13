@@ -1,5 +1,4 @@
 // container
-
 @import "variables";
 @import "button";
 @import "text";
@@ -12,6 +11,12 @@
 @import "footer";
 @import "service";
 @import "clients";
+@import "banner";
+@import "product";
+
+
+@import "slider";
+@import "slider1";
 
 body {
   margin: 0;
@@ -216,14 +221,6 @@ img {
   list-style: none;
 }
 
-
-@import "slider";
-@import "slider1";
-
-
-.slider {
-  margin-bottom: 30px;
-}
 
 .about-slider {
   // margin-left: 10px;

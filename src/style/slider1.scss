@@ -4,9 +4,10 @@
   text-align: center;
 
   & button {
+    $size: 10px;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: $size;
+    height: $size;
     opacity: 50%;
     border-radius: 50%;
     border: none;
@@ -34,4 +35,8 @@
 .tns-outer {
   margin-left: -10px;
   margin-right: -10px;
+}
+
+.slider-block {
+  margin-bottom: 40px;
 }

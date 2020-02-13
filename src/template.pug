@@ -1,0 +1,24 @@
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(href='css/app.css' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext' rel='stylesheet')
+    link(rel='shortcut icon' type='image/x-icon' href='https://dnk-russia.com/favicon.ico')
+    title DNK RUSSIA новый формат одежды без возрастных ограничений 0+
+  body.page
+    header.header
+      include header.pug
+      section
+        .main-banner#site
+          .container
+            .mb30
+              .main-banner__logo
+                img(src="/img/logo--white.svg")
+              //- h1.title dnk-russia
+              h4.slogan.slogan--white новый формат одежды без возрастных ограничений 0+
+            .btn-group
+              a(href="https://dnk-russia.com/catalog/new/").btn Новая коллекция
+      main.main
+        block content

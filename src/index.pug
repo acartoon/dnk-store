@@ -1,332 +1,82 @@
--
-  var menu = [
-    {title: "Верхняя одежда", link: "https://dnk-russia.com/catalog/verkhnyaya_odezhda_/"},
-    {title: "Комбезы", link: "https://dnk-russia.com/catalog/kombezy_/"},
-    {title: "Свитшоты/толстовки", link: "https://dnk-russia.com/catalog/svitshoty_tolstovki/"},
-    {title: "Кофты/футбы", link: "https://dnk-russia.com/catalog/kofty_futby/"},
-    {title: "Костюмы", link: "https://dnk-russia.com/catalog/kostyumy_/"},
-    {title: "Штаны/кидсы", link: "https://dnk-russia.com/catalog/shtany_kidsy/"},
-    {title: "Слипы/Бодики", link: "https://dnk-russia.com/catalog/slipy_bodiki_/"},
-    {title: "Платья/юбки", link: "https://dnk-russia.com/catalog/kombezy/"},
-    {title: "Нижнее белье", link: "https://dnk-russia.com/catalog/nizhnee_bele/"},
-    {title: "Носки", link: "https://dnk-russia.com/catalog/noski_/"},
-  ];
+extends template.pug
 
--
-  var accessories = [
-    {title: "Шапки/Варежки/Шарфы", link: "https://dnk-russia.com/catalog/shapki_kepki/"},
-    {title: "Украшения", link: "https://dnk-russia.com/catalog/ukrasheniya/"},
-    {title: "Сумки/рюкзаки", link: "https://dnk-russia.com/catalog/sumki_ryukzaki/"},
-    {title: "Носки", link: "https://dnk-russia.com/catalog/noski/"},
-    {title: "Другое", link: "https://dnk-russia.com/catalog/drugoe/"},
-  ];
+block content
+  .container
+    section.slider-block
+      .slider
+        .banner
+        .banner
+        .banner
+  section.categories
+    .container
+      .row.mb-3
+        .col-6
+          .banner-catalog.banner-catalog--woman
+            p.banner-catalog__text Женщины
+        .col-6
+          .banner-catalog.banner-catalog--man
+            p.banner-catalog__text Мужчины
+      .row.mb-3
+        .col-12
+          .banner
+      .row.mb-3
+        .col-6
+          .banner-catalog.banner-catalog--child
+            p.banner-catalog__text Дети
+        .col-6
+          .banner-catalog.banner-catalog--teens
+            p.banner-catalog__text Подростки
+      .row.mb-3
+        .col-12
+          .banner
+          .banner__bottom
+            p.banner__name ренессанс
+            p.banner__slogan.slogan строго лимитированно 
+            button.button к коллекции
+      .row.mb-3
+        .col-12
+          .banner
 
--
-  var collections = [
-    {title: "DNK BASE", link: "https://dnk-russia.com/catalog/dnk_base/"},
-    {title: "DNK ORIGINAL", link: "https://dnk-russia.com/catalog/dnk_originall/"},
-    //- {title: "Back to School", link: "https://dnk-russia.com/catalog/shkola_2019/"},
-    {title: "DNK SKULL", link: "https://dnk-russia.com/catalog/dnk_original/"},
-    //- {title: "День/Ночь", link: "https://dnk-russia.com/catalog/den_noch/"},
-    {title: "DNK&Velvet music для Мари Краймбрери", link: "https://dnk-russia.com/catalog/dnk_velvet_music_dlya_mari_kraymbreri/"},
-  ];
+  section.products.mb-3
+    .container
+      h3 Популярные товары
+      .row
+        .col-6.col-md-3
+          .product
+            img.product__img(src="http://placehold.it/350x400", alt="")
+            p.product__name Название товара
+        .col-6.col-md-3.mb-3
+          .product
+            img.product__img(src="http://placehold.it/350x400", alt="")
+            p.product__name Название товара
+        .col-6.col-md-3
+          .product
+            img.product__img(src="http://placehold.it/350x400", alt="")
+            p.product__name Название товара
+        .col-6.col-md-3
+          .product
+            img.product__img(src="http://placehold.it/350x400", alt="")
+            p.product__name Название товара
+  section.sale.mb-3
+    .container
+      hr.mb-4
+      .row
+        .col-12.col-sm-6.mb-4
+          .banner-sale.banner--man
+          p.banner-sale__title Свитшоты от 1 200 р
+          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
+        .col-12.col-sm-6.mb-4
+          .banner-sale.banner--man
+          p.banner-sale__title Куртки от 1 200 р
+          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
+        .col-12.col-sm-6.mb-4
+          .banner-sale.banner.banner--man
+          p.banner-sale__title Комбезы от 1 200 р
+          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
+        .col-12.col-sm-6.mb-4
+          .banner-sale.banner--man
+          p.banner-sale__title Кофты от 1 200 р
+          p.banner-sale__text Новая коллекция свитшотов ренессанс уже на сайте, осталось мало размеров!
 
--
-  var menu_main = [
-    {title: "Одежда", link: "https://dnk-russia.com/catalog/odezhda/", menu: menu},
-    {title: "Аксессуары", link: "https://dnk-russia.com/catalog/accessories/", menu: accessories},
-    {title: "коллекции", link: "https://dnk-russia.com/catalog/kollektsii/",  menu: collections},
-    {title: "sale", link: "https://dnk-russia.com/catalog/dnkatsiya/"},
-  ];
 
--
-  var payment = [
-    {title: 'Visa', link: '/img/payment/visa2.png'},
-    {title: 'Сбербанк', link: '/img/payment/sber.png'},
-    {title: 'PayPal', link: '/img/payment/paypal2.png'},
-    {title: 'ApplePay', link: '/img/payment/apple2.png'},
-    {title: 'Mastercard', link: '/img/payment/mastercard2.png'},
-    {title: 'Мир', link: '/img/payment/mir.png'},
-  ];
-
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(href='css/app.css' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext' rel='stylesheet')
-    link(rel='shortcut icon' type='image/x-icon' href='https://dnk-russia.com/favicon.ico')
-    title DNK RUSSIA новый формат одежды без возрастных ограничений 0+
-  body.page
-    header.header
-      nav.main-nav
-        button(title="Меню", type="button").main-nav__btn.d-lg-none
-          span
-        .main-nav__wrapper
-          .container
-            ul.main-nav__list.text-center
-              li.main-nav__item
-                a(href="https://dnk-russia.com/catalog/new/").main-nav__link--title.main-nav__link.main-nav__link--new new
-              each val in menu_main
-                li.main-nav__item
-                  a(href=val.link).main-nav__link.main-nav__link--title=val.title
-                  if(val.menu)
-                    .main-nav__wrapper-lvl2
-                      button.main-nav__back.d-lg-none назад
-                      hr.main-nav__divider.d-lg-none
-                      ul.main-nav__list.main-nav__list--lvl2
-                        each item in val.menu
-                          li.main-nav__item
-                            a(href=item.link).main-nav__link=item.title
-            li.main-nav__item.main-nav__contacts.d-lg-none
-              a.main-nav__link(href='tel:+79185580518') +7(918) 558 05 18
-              a.main-nav__link(href='mailto:klient@dnk-russia.com') klient@dnk-russia.com
-              a.main-nav__link(href='mailto:support@dnk-russia.com') support@dnk-russia.com
-          ul.main-nav__list.text-center
-      section
-        .main-banner#site
-          .container
-            .mb30
-              .main-banner__logo
-                img(src="/img/logo--white.svg")
-              //- h1.title dnk-russia
-              h4.slogan.slogan--white новый формат одежды без возрастных ограничений 0+
-            .btn-group
-              a(href="https://dnk-russia.com/catalog/new/").btn Новая коллекция
-    main.main
-      section.section.block.container
-        .row
-          .col-12
-            .slider
-              div.block
-                a(href="https://dnk-russia.com/catalog/new/").banner.no-link
-                  img(src="/img/banners/banner_winter_2.jpeg").d-block.d-sm-none
-                  img(src="/img/banners/banner_winter.jpeg").d-none.d-sm-block
-              div.block
-                a(href="/catalog/shapki_kepki/?clear_cache=Y").banner
-                  img(src="/img/banners/happy_m.jpeg").d-block.d-sm-none
-                  img(src="/img/banners/happy_d.jpeg").d-none.d-sm-block
-          .col-12.col-md-4.block
-            a(href="https://dnk-russia.com/catalog/verkhnyaya_odezhda_/").banner.no-link
-              img(src="/img/banners/min_top.jpeg")
-              h3.subtitle Верхняя одежда
-          //- div.block
-          //-   a.banner
-          //-     img(src="/img/banners/min_top_1.jpeg")
-          //-     h3.subtitle 
-          .col-12.col-md-4.block
-            a(href="https://dnk-russia.com/catalog/shapki_kepki/").banner.no-link
-              img(src="/img/banners/mittens.jpeg")
-              h3.subtitle Шапки/Варежки/Шарфы
-          .col-12.col-md-4.block
-            a(href="https://dnk-russia.com/catalog/svitshoty_tolstovki/").banner.no-link
-              img(src="/img/banners/min_top_2.jpeg")
-              h3.subtitle Свитшоты/толстовки
-      section.section.about
-        h2.container.section__title.d-none DNK Это
-        //- video(src='img/video.mp4' loop width='100%')
-        .about__wrapper
-          .container
-            .about-slider
-              .div
-                .about__item
-                  .block.block--black
-                    .subtitle Почему мы
-                    p.text Благодаря неповторимому стилю, непревзойденному качеству, нестандартным решениям, оригинальному крою и дизайну, наш бренд стал известен далеко за пределами нашей страны и любимцем среди Celebrity и Российских звезд, а также победителем ежегодной премии Kids Fashion Awards 2017 и 2019. 
-              .div
-                .about__item
-                  .block.block--black
-                    .subtitle Производство
-                    p.text Все, от идеи до последнего стежка, создается и реализовывается на нашей фабрике, размещеной в г. Ростове-на-Дону. Производство грамотно организовано и контролируется на всех стадиях, от выбора тканей до пошива, что гарантирует высочайшее качество выпускаемых нами изделий. 
-              .div
-                .about__item
-                  .block.block--black
-                    .subtitle Качество
-                    p.text Мы уверены, что любой образ должен быть удобен, и неважно, из какой коллекции 
-                      span.text-uppercase DNK 
-                      | Вы его выбрали, он будет в тренде и максимально комфортен, чтобы Вы чувствовали себя в одежде 
-                      span.text-uppercase DNK
-                      |  уверенно.
-                      | Высокая скорость производства позволяет выпускать неповторимые коллекции, предугадывая будущие тренды, а поклонникам бренда - быть первыми представителями модных тенденций.
-              .div
-                .about__item
-                  .block.block--black
-                    .subtitle Звезды в 
-                      span.text-uppercase DNK
-                      |  и коллаборации
-                    p.text DNK один из первых создал совместные коллекции со звездными поклонниками бренда и известными Российскими кампаниями: 
-                      span.font-italic «Союзмультфильмом», «Смешариками», Телеканалом Пятница - проект Орел &Решка, Алексеем Воробьевым, 
-                      span.text-uppercase.font-italic BLACK STAR WEAR
-                      span.font-italic , Мари Краймбрери (Velvet music), 
-                      span.font-italic.text-uppercase LOVE RADIO
-                      span.font-italic , Анастасией Решетовой.
-              .div
-                .about__item
-                  .block.block--black
-                    .subtitle Коллекции
-                    p.text Для производства трикотажных вещей 
-                      | используется ткань высшего качества
-                      | "Пенье Компакт". Вещи из неё устойчивы к износу, не усаживаются даже от многократных стирок, а также не скатываются. Благодаря этому все вещи гипоаллергенны, экологичны и очень комфортны в носке.
-                      | Верхняя одежда производится с применением ветро- и водонепроницаемых тканей, инновационных утеплителей, нержавеющей прочной фурнитуры.
-              //- div
-              //-   .about__item
-              //-     .block.block--black.test
-              //-       .subtitle Российское производство
-              //-       p.text Все, от идеи до последнего стежка, создается и реализовывается на нашей фабрике, размещеной в г. Ростове-на-Дону, что гарантирует отличное качество продукции. 
-              //- div
-              //-   .about__item
-              //-     .block.block--black
-              //-       .subtitle Качество
-              //-       p.text Для производства трикотажных вещей используется ткань высшего качества "Пенье Компакт". Она отличается шелковистостью и гладкостью, прекрасно держит форму. Вещи из неё устойчивы к износу, не усаживаются даже от многократных стирок, а также не скатываются. Благодаря этому все вещи гипоаллергенны, экологичны и очень комфортны в носке.
-              //- div
-              //-   .about__item
-              //-     .block.block--black
-              //-       .subtitle Стиль
-              //-       p.text Благодаря неповторимому стилю, непревзойденному качеству, нестандартным решениям, оригинальному крою и дизайну наш бренд стал известен далеко за пределами нашей страны и любимцем среди Celebrity и Российских звезд.
-              //- div
-              //-   .about__item
-              //-     .block.block--black
-              //-       .subtitle Участие в показах
-              //-       p.text Мы не только принимаем участие в различных показах и неделях моды: MFW 2018 и 2019 , BFW2018,- но и являемся ПОБЕДИТЕЛЕМ ЕЖЕГОДНОЙ ПРЕМИИ Kids Fashion Awards 2017 и 2019. 
-              //- div
-              //-   .col-12.about__item
-              //-     .block.block--black
-              //-       .subtitle Коллаборации
-              //-       p.text Бренд DNK @dnk.russia один из первых создал совместные коллекции со звездными поклонниками бренда и известными Российскими кампаниями:
-              //-         | «Союзмультфильмом»,
-              //-         | «Смешариками»,
-                      //- | Телеканалом Пятница - проект Орел &Решка,
-                      //- | АЛЕКСЕЕМ ВОРОБЬЕВЫМ,
-                      //- | BLACK STAR WEAR "НОВАЯ ШКОЛА",
-                      //- | "АЛИСА В СТРАНЕ ЧУДЕС bySimona",
-                      //- | Мари Краймбрери (Velvet music),
-                      //- | LOVE RADIO,
-                      //- | Анастасией Решетовой,
-                      //- | Симоной (мамой российского рэп-исполнителя и предпринимателя Тимура Юнусова, более известного как Тимати).
-      section.section.container
-        .row
-          .col-12
-            h2.section__title коллекции
-          .col-12.block
-            h3.subtitle dnk-base
-            p.text 
-              | Лаконичная, удобная, идеально сочетающаяся с любымии колекциями 
-              span.text-uppercase.font-weight-bold DNK
-              | . В ней сочетаются приятная цена, идеальный фирменный крой, геометрия и качество ткани.
-              | Коллекция не отвлекает внимание на детали она выдержана и помогает сосредоточится на главном - учебе, работе, спортивных достижениях. 
-          .block.col-12
-            .row
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/base/1.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/base/2.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/base/3.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/base/4.jpeg")
-            a(href="https://dnk-russia.com/catalog/dnk_base/").btn.btn--dark.m-auto В раздел
-          .col-12.block
-            h3.subtitle dnk-original
-            p.text Коллекция, в которой мы творим каждый стежок вручную. 
-              | Выстраиваем сложную геометрию кроя и делаем коллекцию 
-              span.text-uppercase original
-              |  в маленьком - эксклюзивном количестве.
-              |  Для тех, кто не боится заявить о себе и показать внутренний характер.
-            p.text Для тех, кто любит экспериментировать с образами, кто ищет самовыражения. 
-              | Для тех, кто также как и мы увлечен модой, творчеством и хочет изменить мир!
-          .block.col-12
-            .row
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/original/1.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/original/2.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/original/3.jpeg")
-              .block.col-6.col-md-3
-                .img
-                  img(src="/img/original/4.jpeg")
-      
-            a(href="https://dnk-russia.com/catalog/dnk_originall/").btn.btn--dark.m-auto В раздел
-      //- section.section.stats
-      //-   .container
-      //-     h2.section__title О компании
-      //-     p.text
-      //-       | Мы гордимся тем, что являемся Российским производством полного цикла.
-      //-     p.text
-      //-       | Все от идеи до последнего стежка создается и реализовывается на нашей фабрике, размещеной в г. Ростове-на-Дону, что гарантирует отличное качество продукции.
-      //-       | Вся продукция бренда позиционируется не только как стильная, но и комфортная. Она направлена на то, чтобы Вы чувствовали себя в одежде DNK удобно и уверенно.
-      //-     p.text
-      //-       | Для производства трикотажных вещей используется ткань высшего качества "Пенье Компакт". Она отличается шелковистостью и гладкостью, прекрасно держит форму. Вещи из неё устойчивы к износу, не усаживаются даже от многократных стирок, а также не скатываются. Благодаря этому все вещи гипоаллергенны, экологичны и очень комфортны в носке.
-      //-     p.text
-      //-       | Верхняя одежда производится с применением ветро- и водонепроницаемых тканей, инновационных утеплителей, нержавеющей прочной фурнитуры.
-      //-       | Идеальное качество вещей также достигается благодаря строжайшему контролю на всех этапах производства.
-      //-       |А высокая скорость производства позволяет выпускать неповторимые коллекции, предугадывая будущие тренды, а поклонникам бренда - быть первыми представителями этих модных тенденций.
-          //- ul.list.row
-          //-   li.list__item.col-12.col-md-4.mb-10
-          //-     dl.stats-list
-          //-       dd.stats-list__data 4
-          //-       dd.stats-list__desc года на рынке
-          //-   li.list__item.col-12.col-md-4
-          //-     dl.stats-list
-          //-       dd.stats-list__data 14
-          //-       dd.stats-list__desc магазинов по всему миру
-          //-   li.list__item.col-12.col-md-4
-          //-     dl.stats-list
-          //-       dd.stats-list__data 2
-          //-       dd.stats-list__desc коллекции в месяц
-      section.section
-        .container
-          h2.section__title Оплата
-          p.text.block
-            | В нашем интернет-магазине Вы можете оплачивать заказы любыми популярными платежными системами. Достаточно выбрать желаемую платежную систему
-          ul.list.row
-            each val in payment
-              li.list__item.col-6.col-md-2
-                .img.img--50
-                  img(src=val.link, alt=val.title)
-    footer.footer
-      .footer__top.clients
-        .container
-          h2.section__title помощь
-          ul.service.row
-            li.service__item.service__item--delivery.col-12.col-md-4.text-center
-              h3.subtitle доставка
-              p.text
-                | Удобная доставка по всей России и не только
-              a(href="https://dnk-russia.com/help/delivery/").link подробнее
-            li.service__item.service__item--return.col-12.col-md-4.text-center
-              h3.subtitle возврат
-              p.text
-                | Осуществить возврат Вы можете в течении 7 календарных дней после получения Вашего заказа
-              a(href="https://dnk-russia.com/help/howback/").link подробнее
-            li.service__item.service__item--help.col-12.col-md-4.text-center
-              h3.subtitle обратная связь
-              p.text
-                | Вы можете связаться с нами по телефону, электронной почте или другим удобным для Вас способом
-              a(href="https://dnk-russia.com/about/contacts/").link подробнее
-      .footer__bottom.container
-        //- p.text.text-center © 2019 dnk-russa
-        ul.sotial.row
-          li.sotial__item.col-3
-            a(href="https://www.youtube.com/channel/UCN9ohJNPvi1OYIBQsi9IwtA?view_as=subscriber").sotial__link.sotial__link--yt
-          li.sotial__item.col-3
-            a(href="https://vk.com/public160646580").sotial__link.sotial__link--vk
-          li.sotial__item.col-3
-            a(href="https://www.instagram.com/dnk.russia/").sotial__link.sotial__link--inst
-          li.sotial__item.col-3
-            a(href="https://www.facebook.com/dnkrus/posts/?ref=page_internal").sotial__link.sotial__link--fb
-        //- ul.main-nav__list.text-center
-        //-   li.main-nav__item
-        //-     a.main-nav__link(href='tel:+79185580518') +7(918) 558 05 18
-        //-   li.main-nav__item
-        //-     a.main-nav__link(href='mailto:klient@dnk-russia.com') klient@dnk-russia.com
-        //-   li.main-nav__item
-        //-     a.main-nav__link(href='mailto:support@dnk-russia.com') support@dnk-russia.com
+        

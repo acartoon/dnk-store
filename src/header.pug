@@ -1,0 +1,76 @@
+-
+  var menu = [
+    {title: "Верхняя одежда", link: "https://dnk-russia.com/catalog/verkhnyaya_odezhda_/"},
+    {title: "Комбезы", link: "https://dnk-russia.com/catalog/kombezy_/"},
+    {title: "Свитшоты/толстовки", link: "https://dnk-russia.com/catalog/svitshoty_tolstovki/"},
+    {title: "Кофты/футбы", link: "https://dnk-russia.com/catalog/kofty_futby/"},
+    {title: "Костюмы", link: "https://dnk-russia.com/catalog/kostyumy_/"},
+    {title: "Штаны/кидсы", link: "https://dnk-russia.com/catalog/shtany_kidsy/"},
+    {title: "Слипы/Бодики", link: "https://dnk-russia.com/catalog/slipy_bodiki_/"},
+    {title: "Платья/юбки", link: "https://dnk-russia.com/catalog/kombezy/"},
+    {title: "Нижнее белье", link: "https://dnk-russia.com/catalog/nizhnee_bele/"},
+    {title: "Носки", link: "https://dnk-russia.com/catalog/noski_/"},
+  ];
+
+-
+  var accessories = [
+    {title: "Шапки/Варежки/Шарфы", link: "https://dnk-russia.com/catalog/shapki_kepki/"},
+    {title: "Украшения", link: "https://dnk-russia.com/catalog/ukrasheniya/"},
+    {title: "Сумки/рюкзаки", link: "https://dnk-russia.com/catalog/sumki_ryukzaki/"},
+    {title: "Носки", link: "https://dnk-russia.com/catalog/noski/"},
+    {title: "Другое", link: "https://dnk-russia.com/catalog/drugoe/"},
+  ];
+
+-
+  var collections = [
+    {title: "DNK BASE", link: "https://dnk-russia.com/catalog/dnk_base/"},
+    {title: "DNK ORIGINAL", link: "https://dnk-russia.com/catalog/dnk_originall/"},
+    //- {title: "Back to School", link: "https://dnk-russia.com/catalog/shkola_2019/"},
+    {title: "DNK SKULL", link: "https://dnk-russia.com/catalog/dnk_original/"},
+    //- {title: "День/Ночь", link: "https://dnk-russia.com/catalog/den_noch/"},
+    {title: "DNK&Velvet music для Мари Краймбрери", link: "https://dnk-russia.com/catalog/dnk_velvet_music_dlya_mari_kraymbreri/"},
+  ];
+
+-
+  var menu_main = [
+    {title: "Одежда", link: "https://dnk-russia.com/catalog/odezhda/", menu: menu},
+    {title: "Аксессуары", link: "https://dnk-russia.com/catalog/accessories/", menu: accessories},
+    {title: "коллекции", link: "https://dnk-russia.com/catalog/kollektsii/",  menu: collections},
+    {title: "sale", link: "https://dnk-russia.com/catalog/dnkatsiya/"},
+  ];
+
+-
+  var payment = [
+    {title: 'Visa', link: '/img/payment/visa2.png'},
+    {title: 'Сбербанк', link: '/img/payment/sber.png'},
+    {title: 'PayPal', link: '/img/payment/paypal2.png'},
+    {title: 'ApplePay', link: '/img/payment/apple2.png'},
+    {title: 'Mastercard', link: '/img/payment/mastercard2.png'},
+    {title: 'Мир', link: '/img/payment/mir.png'},
+  ];
+
+
+nav.main-nav
+  button(title="Меню", type="button").main-nav__btn.d-lg-none
+    span
+  .main-nav__wrapper
+    .container
+      ul.main-nav__list.text-center
+        li.main-nav__item
+          a(href="https://dnk-russia.com/catalog/new/").main-nav__link--title.main-nav__link.main-nav__link--new new
+        each val in menu_main
+          li.main-nav__item
+            a(href=val.link).main-nav__link.main-nav__link--title=val.title
+            if(val.menu)
+              .main-nav__wrapper-lvl2
+                button.main-nav__back.d-lg-none назад
+                hr.main-nav__divider.d-lg-none
+                ul.main-nav__list.main-nav__list--lvl2
+                  each item in val.menu
+                    li.main-nav__item
+                      a(href=item.link).main-nav__link=item.title
+      li.main-nav__item.main-nav__contacts.d-lg-none
+        a.main-nav__link(href='tel:+79185580518') +7(918) 558 05 18
+        a.main-nav__link(href='mailto:klient@dnk-russia.com') klient@dnk-russia.com
+        a.main-nav__link(href='mailto:support@dnk-russia.com') support@dnk-russia.com
+    ul.main-nav__list.text-center

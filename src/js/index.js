@@ -1,13 +1,24 @@
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 
+var slider = tns({
+  container: `.slider`,
+  autoplay: false,
+  autoplayButton: false,
+  // speed: 100,
+  autoplayTimeout: 4000,
+  autoplayButtonOutput: false,
+  autoplayResetOnVisibility: false,
+  navPosition: 'bottom',
+  mouseDrag: true,
+  responsive: {
+    "350": {
+      "items": 1
+    }
+  },
+});
+
 // var slider = tns({
-//   container: `.slider`,
-//   autoplay: true,
-//   autoplayButton: false,
-//   // speed: 100,
-//   autoplayTimeout: 4000,
-//   autoplayButtonOutput: false,
-//   autoplayResetOnVisibility: false,
+//   container: `.about-slider`,
 //   navPosition: 'bottom',
 //   mouseDrag: true,
 //   responsive: {
@@ -16,27 +27,16 @@ import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 //     }
 //   },
 // });
-
-var slider = tns({
-  container: `.about-slider`,
-  navPosition: 'bottom',
-  mouseDrag: true,
-  responsive: {
-    "350": {
-      "items": 1
-    }
-  },
-});
-var slider = tns({
-  container: `.slider`,
-  navPosition: 'bottom',
-  mouseDrag: true,
-  responsive: {
-    "350": {
-      "items": 1
-    }
-  },
-});
+// var slider = tns({
+//   container: `.slider`,
+//   navPosition: 'bottom',
+//   mouseDrag: true,
+//   responsive: {
+//     "350": {
+//       "items": 1
+//     }
+//   },
+// });
 
 // var slider = tns({
 //   container: `.slider--original`,
