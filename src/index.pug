@@ -1,7 +1,7 @@
 extends template.pug
 
 block content
-  section.categories.mb-4
+  section.categories.mb-5.mb-md-0
     .container-fluid
       .row
         .main-banner2
@@ -15,12 +15,12 @@ block content
         .col-12.col-md-6
           .row
             img(src="http://placeimg.com/775/430/people")
-        .col-12.col-md-6.block-info
+        .col-12.col-md-6.block-info.text-center
           p.headertest Женщины
           p.text Платья, футбы, толстовки и многое другое. Не забываем смотреть family Look
           button.button.button--big купить
-      .row.mb-5
-        .col-12.col-md-6.block-info.block-info--grey.order-2.order-md-0
+      .row
+        .col-12.col-md-6.block-info.block-info--grey.order-2.order-md-0.text-center
           p.headertest Мужчины
           p.text Крутая мужская коллекция dnk cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать нескольк
           button.button.button--big купить
@@ -30,7 +30,7 @@ block content
 
   .container-fluid
     .row
-      .banner
+      //- .banner
       .banner__bottom
         p.banner__name ренессанс
         p.banner__slogan.slogan строго лимитированно 
@@ -42,12 +42,12 @@ block content
         .col-12.col-md-6
           .row
             img(src="http://placeimg.com/775/430/people")
-        .col-12.col-md-6.block-info.text-center.block-info--grey
+        .col-12.col-md-6.block-info.text-center.block-info--grey.text-center
           p.headertest Подростки
           p.text Платья, футбы, толстовки и многое другое. Не забываем смотреть family Look
           button.button.button--big купить
-      .row.mb-3
-        .col-12.col-md-6.block-info.order-2.order-md-0
+      .row
+        .col-12.col-md-6.block-info.order-2.order-md-0.text-center
           p.headertest Дети
           p.text Крутая мужская коллекция dnk cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать нескольк
           button.button.button--big купить
@@ -55,28 +55,28 @@ block content
           .row
             img(src="http://placeimg.com/775/430/people")
 
-  section.products.mb-5
+  section.block-info.block-info--grey.text-md-left.mb-5
     .container
       p.headertest Популярные товары
       .row
         .col-6.col-md-3
           .product
-            img.product__img(src="/img/1_.jpg", alt="")
+            img.product__img(src="http://placeimg.com/500/749/people", alt="")
             p.product__name Костюм Error202 мокко Junior
         .col-6.col-md-3.mb-3
           .product
-            img.product__img(src="/img/2_.jpg", alt="")
+            img.product__img(src="http://placeimg.com/500/749/people", alt="")
             p.product__name Свитшот Русский Стиль красный Junior
         .col-6.col-md-3
           .product
-            img.product__img(src="/img/3_.jpg", alt="")
+            img.product__img(src="http://placeimg.com/500/749/people", alt="")
             p.product__name Майка Граффити черная Junior
         .col-6.col-md-3
           .product
-            img.product__img(src="/img/4_.jpg", alt="")
+            img.product__img(src="http://placeimg.com/500/749/people", alt="")
             p.product__name Свитшот MADE IN РФ красный Woman
     
-  section.caps.mb-5
+  section.caps.block-info
     .container
       .row
         .col-12.col-md-6
@@ -85,25 +85,94 @@ block content
           p.headertest Товар который мы хотим активней продать!
           p.caps__text.text cайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
           button.button.button--big купить
-  section.container
-    p.headertest Стильные образы
+
+  section.block-info.block-info--grey
+    .container
+      p.headertest Успейте купить
+        .row
+          .col-6.col-md-3
+            .product
+              img.product__img(src="http://placeimg.com/500/749/people", alt="")
+              p.product__name Название товара
+          .col-6.col-md-3.mb-3
+            .product
+              img.product__img(src="http://placeimg.com/500/749/people", alt="")
+              p.product__name Название товара
+          .col-6.col-md-3
+            .product
+              img.product__img(src="http://placeimg.com/500/749/people", alt="")
+              p.product__name Название товара
+          .col-6.col-md-3
+            .product
+              img.product__img(src="http://placeimg.com/500/749/people", alt="")
+              p.product__name Название товара
+
+  section.sale-list.block-info
+    .container
+      p.headertest Наши акции
+        .row
+          .col-12.col-md-6
+            .sale__block
+              img.product__img(src="http://placeimg.com/600/300/people", alt="")
+              p.sale__title Шапки Свет
+              p.sale__text.texttext Шапки свет по 50% успейте купить! Шапки свет по 50% успейте купить!
+          .col-12.col-md-6
+            .sale__block
+              img.product__img(src="http://placeimg.com/600/300/people", alt="")
+              p.sale__title Бесплатная доставка
+              p.sale__text.text По России от 7 000, заграница 15 000. По России от 7 000, заграница 15 000
+          .col-12.col-md-6
+            .sale__block
+              img.product__img(src="http://placeimg.com/600/300/people", alt="")
+              p.sale__title last size
+              p.sale__text.text На товары с надписью last size - Дополнительная скидка в 20% По России от 7 000, заграница 15 000
+          .col-12.col-md-6
+            .sale__block
+              img.product__img(src="http://placeimg.com/600/300/people", alt="")
+              p.sale__title Бесплатная доставка
+              p.sale__text.text По России от 7 000, заграница 15 000. По России от 7 000, заграница 15 000
+
+  section
+    .container
+      //- p.headertest Коллекции
+    .container-fluid
       .row
-        .col-6.col-md-3
-          .product
-            img.product__img(src="http://placeimg.com/350/400/people", alt="")
-            p.product__name Название товара
-        .col-6.col-md-3.mb-3
-          .product
-            img.product__img(src="http://placeimg.com/350/400/people", alt="")
-            p.product__name Название товара
-        .col-6.col-md-3
-          .product
-            img.product__img(src="http://placeimg.com/350/400/people", alt="")
-            p.product__name Название товара
-        .col-6.col-md-3
-          .product
-            img.product__img(src="http://placeimg.com/350/400/people", alt="")
-            p.product__name Название товара
+        .collection.collection--ren
+          //- .col-12.col-md-6.ml-auto
+          .white-block
+            p.headertest Ренессанс 
+            p.caps__text.text коллекция вдохновленная чем-нибудь и еще что-нибудь дописать, ох бедная Татьяна маркетолог :)  вдохновленная чем-нибудь и еще что-нибудь дописать, ох бедная Татьяна маркетолог :)
 
+          //- - for (var x = 0; x < 4; x++)
+          //-   .col-6.col-md-3
+          //-     .mb-3.mb-md-3.margin-block
+          //-       img.product__img(src="http://placeimg.com/380/450/people", alt="")
 
-  
+  section.block-info
+    .container
+      .text-center.mb-5
+        p.headertest Подборка DNK
+        p.text Наши сотрудники подобрали свои самые любимые образы.
+      .row
+        - for (var x = 0; x < 8; x++)
+          .col-6.col-md-3
+            .mb-3.mb-md-3.margin-block
+              img.product__img(src="http://placeimg.com/380/450/people", alt="")
+
+  section.block-info
+    .text-center.mb-5
+      p.headertest.mb-2 А еще у нас есть ...
+      p.subheader Family look
+    .container
+      .row.look
+        - for (var x = 0; x < 4; x++)
+          .look__item.col-12.col-md-6
+            img(src="http://placeimg.com/775/430/people")
+
+  section.block-info
+    .text-center.mb-5
+      p.headertest.mb-2 Оффлайн
+      p.subheader DNK Вы найдете от Лондона до Владивостока
+      div(id='maps')
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A60ae92a564d7f4d02c5aba95a2556262773fb34989b9e75dd6553aeafc8b5486&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false"></script>
+      

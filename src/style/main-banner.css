@@ -1,0 +1,16 @@
+.main-banner {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  padding-top: 60px;
+  padding-left: 30px;
+  background: #000;
+  background: #272727;
+  padding-right: 30px;
+}
+
+.main-banner__logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=main-banner.css.map */

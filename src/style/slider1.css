@@ -1,0 +1,41 @@
+.tns-nav {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.tns-nav button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  opacity: 50%;
+  border-radius: 50%;
+  border: none;
+  margin-right: 10px;
+}
+
+.tns-nav button:last-child {
+  margin-right: 0;
+}
+
+.tns-nav-active {
+  background: #272727;
+}
+
+.tns-controls {
+  display: none;
+}
+
+.slider__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tns-outer {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.slider-block {
+  margin-bottom: 40px;
+}
+/*# sourceMappingURL=slider1.css.map */
